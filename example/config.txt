@@ -1,0 +1,2 @@
+Prefix plugins/VST/example/
+Plugin VST inputfile parameters.vst.txt outputfile VST.rds
