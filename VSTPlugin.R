@@ -20,6 +20,7 @@ run <- function() {}
 output <- function(outputfile) {
     pbmc <- readRDS(paste(pfix, parameters["rdsfile", 2], sep="/"))
 pbmc <- FindVariableFeatures(pbmc, selection.method = "vst", nfeatures = as.integer(parameters["features", 2]))
+write.csv(pbmc@assays$RNA@counts@i, paste(outputfile, "csv", sep="."))
     saveRDS(pbmc, outputfile)
 }
 
